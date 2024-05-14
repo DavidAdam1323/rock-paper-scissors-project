@@ -13,6 +13,9 @@ const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 
+let playerScore = 0;
+let computerScore = 0;
+
 // Create a Function that takes the player's choice as input; ✅
 function playGame(playerChoice) {
   // Create a Computer's choice that randomly selects Rock, Paper, or Scissors; ✅
