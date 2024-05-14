@@ -48,3 +48,7 @@ body {
   background-color: aliceblue;
   cursor: pointer;
 }
+
+.choices button:hover {
+  background-color: #e5b8f4;
+}
