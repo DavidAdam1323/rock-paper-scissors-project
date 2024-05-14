@@ -13,26 +13,29 @@ const resultDisplay = document.getElementById("resultDisplay");
 function playGame(playerChoice) {
   // Create a Computer's choice that randomly selects Rock, Paper, or Scissors; ✅
   const computerChoice = choices[Math.floor(Math.random() * 3)];
-  let resultDisplay = " ";
+  let result = " ";
   // Compares player'choice with the computer's choice; ✅
   // determines the game result (win, lose, or tie). ✅
   if (playerChoice === computerChoice) {
-    resultDisplay = "It's a TIE!";
+    result = "It's a TIE!";
   } else {
     switch (playerChoice) {
       case "rock":
-        resultDisplay =
-          computerChoice === "scissors" ? "You WIN!" : "You LOSE!";
+        result = computerChoice === "scissors" ? "You WIN!" : "You LOSE!";
         break;
       case "paper":
-        resultDisplay = computerChoice === "rock" ? "You WIN!" : "You LOSE!";
+        result = computerChoice === "rock" ? "You WIN!" : "You LOSE!";
         break;
       case "scissors":
-        resultDisplay = computerChoice === "paper" ? "You WIN!" : "You LOSE!";
+        result = computerChoice === "paper" ? "You WIN!" : "You LOSE!";
         break;
     }
     console.log(computerChoice);
   }
+  // Updated text content on the screen to display player's choice, computer's choice, and game result; ✅
+  playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+  computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+  resultDisplay.textContent = result;
 }
 
 // Add Event Listeners: Add event listeners to the Rock, Paper, and Scissors buttons to allow the player to make a choice.
