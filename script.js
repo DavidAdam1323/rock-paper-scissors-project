@@ -9,9 +9,31 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
-// Create a Function to Generate Computer's Choice: Write a function that randomly selects Rock, Paper, or Scissors for the computer.
-
-// Create a Function to Play the Game: Write a function that takes the player's choice as input, compares it with the computer's choice, and determines the game result (win, lose, or tie).
+// Create a Function that takes the player's choice as input; ✅
+function playGame(playerChoice) {
+  // Create a Computer's choice that randomly selects Rock, Paper, or Scissors; ✅
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+  let resultDisplay = " ";
+  // Compares player'choice with the computer's choice; ✅
+  // determines the game result (win, lose, or tie). ✅
+  if (playerChoice === computerChoice) {
+    resultDisplay = "It's a TIE!";
+  } else {
+    switch (playerChoice) {
+      case "rock":
+        resultDisplay =
+          computerChoice === "scissors" ? "You WIN!" : "You LOSE!";
+        break;
+      case "paper":
+        resultDisplay = computerChoice === "rock" ? "You WIN!" : "You LOSE!";
+        break;
+      case "scissors":
+        resultDisplay = computerChoice === "paper" ? "You WIN!" : "You LOSE!";
+        break;
+    }
+    console.log(computerChoice);
+  }
+}
 
 // Add Event Listeners: Add event listeners to the Rock, Paper, and Scissors buttons to allow the player to make a choice.
 
