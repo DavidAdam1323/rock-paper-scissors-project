@@ -35,6 +35,19 @@ function playGame(playerChoice) {
   playerDisplay.textContent = `Player: ${playerChoice}`;
   computerDisplay.textContent = `Computer: ${computerChoice}`;
   resultDisplay.textContent = result;
+
+  // Restore 'It's a TIE!' to its original state;
+  resultDisplay.classList.remove("greenText", "redText");
+
+  // Examine the result and assign a text color of green for winning and red for losing;
+  switch (result) {
+    case "You WIN!":
+      resultDisplay.classList.add("greenText");
+      break;
+    case "You LOSE!":
+      resultDisplay.classList.add("redText");
+      break;
+  }
 }
 
 // Add Event Listeners: Add event listeners to the Rock, Paper, and Scissors buttons to allow the player to make a choice.
