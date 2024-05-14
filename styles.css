@@ -10,7 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   padding-left: 10px;
-  background: linear-gradient(
+  background: #1b1a55;
+  /* background: linear-gradient(
     180deg,
     #03001c,
     #2d033b,
@@ -19,13 +20,13 @@ body {
     #e5b8f4,
     #c147e9,
     #810ca8
-  );
+  ); */
 }
 
 .container {
   max-width: 700px;
   width: 100%;
-  background: #fff;
+  background: #dde6ed;
   padding: 25px 30px;
   border-radius: 5px;
 }
@@ -45,13 +46,13 @@ body {
   min-width: 160px;
   margin: 0 10px;
   border-radius: 50%;
-  border: blueviolet solid 1px;
-  background-color: aliceblue;
+  border: #1b1a55 solid 1px;
+  background-color: #fff;
   cursor: pointer;
 }
 
 .choices button:hover {
-  background-color: #e5b8f4;
+  background-color: lightblue;
 }
 
 #playerDisplay,
