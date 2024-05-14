@@ -1,7 +1,7 @@
 // Rock, Paper & Scissors
 
 // Set up an Array of choices with string's type; ✅
-const choices = ["rock", "paper", "scissors"];
+const choices = ["Rock", "Paper", "Scissors"];
 
 // Set Up Variables: Create variables to store the player's choice, computer's choice, and the game result. ✅
 // Update the DOM: Update the DOM to display the player's choice, computer's choice, and the game result. ✅
@@ -20,21 +20,20 @@ function playGame(playerChoice) {
     result = "It's a TIE!";
   } else {
     switch (playerChoice) {
-      case "rock":
-        result = computerChoice === "scissors" ? "You WIN!" : "You LOSE!";
+      case "Rock":
+        result = computerChoice === "Scissors" ? "You WIN!" : "You LOSE!";
         break;
-      case "paper":
-        result = computerChoice === "rock" ? "You WIN!" : "You LOSE!";
+      case "Paper":
+        result = computerChoice === "Rock" ? "You WIN!" : "You LOSE!";
         break;
-      case "scissors":
-        result = computerChoice === "paper" ? "You WIN!" : "You LOSE!";
+      case "Scissors":
+        result = computerChoice === "Paper" ? "You WIN!" : "You LOSE!";
         break;
     }
-    console.log(computerChoice);
   }
   // Updated text content on the screen to display player's choice, computer's choice, and game result; ✅
-  playerDisplay.textContent = `PLAYER: ${playerChoice}`;
-  computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+  playerDisplay.textContent = `Player: ${playerChoice}`;
+  computerDisplay.textContent = `Computer: ${computerChoice}`;
   resultDisplay.textContent = result;
 }
 
