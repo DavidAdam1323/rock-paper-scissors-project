@@ -9,6 +9,10 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
+// Create variables to track and display the player's and computer's scores; ✅
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
 // Create a Function that takes the player's choice as input; ✅
 function playGame(playerChoice) {
   // Create a Computer's choice that randomly selects Rock, Paper, or Scissors; ✅
@@ -36,10 +40,10 @@ function playGame(playerChoice) {
   computerDisplay.textContent = `Computer: ${computerChoice}`;
   resultDisplay.textContent = result;
 
-  // Restore 'It's a TIE!' to its original state;
+  // Restore 'It's a TIE!' to its original state; ✅
   resultDisplay.classList.remove("greenText", "redText");
 
-  // Examine the result and assign a text color of green for winning and red for losing;
+  // Examine the result and assign a text color of green for winning and red for losing; ✅
   switch (result) {
     case "You WIN!":
       resultDisplay.classList.add("greenText");
