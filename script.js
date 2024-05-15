@@ -50,22 +50,18 @@ function playGame(playerChoice) {
   switch (result) {
     case "You WIN!":
       resultDisplay.classList.add("greenText");
+      playerScore++;
+      playerScoreDisplay.textContent = playerScore; // Adding score and displaying for the player; ✅
       break;
     case "You LOSE!":
       resultDisplay.classList.add("redText");
+      computerScore++;
+      computerScoreDisplay.textContent = computerScore; // Adding score and displaying for the computer; ✅
       break;
   }
 }
 
-// Add Event Listeners: Add event listeners to the Rock, Paper, and Scissors buttons to allow the player to make a choice.
-
-// Call Functions:Call the function to generate the computer's choice when the player makes their choice.
-// Call the function to play the game and display the result.
-
-// Handle Game Result: Update the game result based on the outcome of the game (win, lose, or tie).
-
-// Reset the Game: Allow the player to play again by resetting the choices and result.
-
-// Test Your Game: Test your game by playing multiple rounds to ensure it functions correctly.
-
-// Refactor and Optimize: Review your code, refactor any repetitive or unnecessary code, and optimize the logic for better performance.
+// Game tested by playing multiple rounds to ensure it functions correctly. ✅
+// Update the game result based on the outcome of the game. ✅
+// Generate the computer's choice when the player makes their choice. ✅
+// Code reviewed, logic optimize for better performance and understanding, also any repetitive or unnecessary code refactored. ✅
